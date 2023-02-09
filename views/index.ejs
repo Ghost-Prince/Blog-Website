@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog website homepage | Blue Fox Studios</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <hr>
+        <div  id="top-heading">
+            <img src="blue-fox.png" alt="logo">
+            <h1>Welcome to blog website by Blue Fox Studios.</h1>
+        </div>
+        <hr>
+        <div id="content">
+            <ul>
+                <% for(var index=0; index<headings.length; index++) { %>
+                    <h2><%= headings[index] %></h2>
+                    <p><%= contents[index] %></p>
+                <% } %>
+            </ul>
+        </div>
+        <hr>
+        <div id="main-form">
+            <form action="/" method="post">
+                <table cellspacing="15px" align="center">
+                    <tr>
+                        <td>Heading:</td>
+                        <td><input type="text" name="blogHeading" placeholder="Enter heading"></td>
+                    </tr>
+                    <tr>
+                        <td>Content:</td>
+                        <td><textarea name="blogContent" cols="50" rows="10" placeholder="Enter content"></textarea></td>
+                    </tr>
+                </table>
+                <div class="submit-button">
+                    <button align="center" class="button-85" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+    </body>
+    <footer>
+        <p>Made with ❤️ by Blue Fox Studios.</p>
+    </footer>
+    <hr>
+</html>
